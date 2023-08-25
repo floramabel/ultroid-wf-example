@@ -72,9 +72,10 @@ jobs:
       - name: Install Ultroid
         continue-on-error: false
         run: |
-           wget https://raw.githubusercontent.com/TeamUltroid/Ultroid/dev/installer.sh && chmod +x installer.sh && sudo bash installer.sh --dir="/root/TeamUltroid" --branch=dev --env-file="ultroid/.env"
            pip install pytgcalls==2.0.0 tgcalls==2.0.0
            pip install emoji
+           wget https://raw.githubusercontent.com/TeamUltroid/Ultroid/dev/installer.sh && chmod +x installer.sh && sudo bash installer.sh --dir="/root/TeamUltroid" --branch=dev --env-file="ultroid/.env"
+           
 
       - name: Run Ultroid
         continue-on-error: false
